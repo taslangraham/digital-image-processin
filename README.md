@@ -1,1 +1,1 @@
-A collection of digital image processes/techniques
+A collection of digital image processing techniques
