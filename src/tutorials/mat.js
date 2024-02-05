@@ -11,14 +11,14 @@ import { promisify } from 'util'
 import cv from '@techstark/opencv-js'
 import { Canvas, createCanvas, Image, ImageData, loadImage } from 'canvas'
 import { JSDOM } from 'jsdom'
-import { sleep } from './utils/utils.js'
-import { getCurrentDirectory } from './utils/module-library.js'
-import { installDOM } from './utils/install-dom.js'
+import { sleep } from '../utils/utils.js'
+import { getCurrentDirectory } from '../utils/module-library.js'
+import { installDOM } from '../utils/install-dom.js'
 
 // Get the directory containing the script file
 const currentDir = getCurrentDirectory(import.meta.url)
 
-const imagePath = join(currentDir, 'images', 'church.png')
+const imagePath = join(currentDir, '../../src/images', 'church.png')
 
 /**
  * Demonstrates different ways to copy Mat objects in openCV
