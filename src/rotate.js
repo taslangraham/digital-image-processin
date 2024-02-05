@@ -12,25 +12,13 @@ import { Canvas, createCanvas, Image, ImageData, loadImage } from 'canvas';
 import { JSDOM } from 'jsdom';
 import { sleep } from './utils/utils.js';
 import { getCurrentDirectory } from './utils/module-library.js';
+import { installDOM } from './utils/install-dom.js';
 
 const unlinkAsync = promisify(fs.unlink);
 // Get the directory containing the script file
 const currentDir = getCurrentDirectory(import.meta.url);
 
 const imagePath = join(currentDir, 'images', 'church.png');
-
-
-// Using jsdom and node-canvas we define some global variables to emulate HTML DOM.
-// Only define those globals used by cv.imread() and cv.imshow().
-function installDOM() {
-	const dom = new JSDOM();
-	global.document = dom.window.document;
-	// The rest enables DOM image and canvas and is provided by node-canvas
-	global.Image = Image;
-	global.HTMLCanvasElement = Canvas;
-	global.ImageData = ImageData;
-	global.HTMLImageElement = Image;
-}
 
 
 async function rotateWithSharpJs() {
