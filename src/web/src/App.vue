@@ -1,27 +1,13 @@
 <script setup lang="ts">
-import * as cv from '@techstark/opencv-js'
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-
-console.log('OPEN CV OBJECT')
-console.log(cv)
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">Open CV Web App</div>
-  </header>
-
+  <div class="wrapper">Open CV Web App</div>
   <RouterView />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
 
 .logo {
   display: block;
@@ -70,13 +56,6 @@ nav a:first-of-type {
     flex-wrap: wrap;
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
 
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
 }
 </style>
