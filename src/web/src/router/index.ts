@@ -10,11 +10,24 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+
     {
       path: '/getting-started-with-images',
       name: 'gettingStartedWithImages',
       component: GettingStartedWithImages
     },
+
+    {
+      path: '/roi',
+      name: 'roi',
+      component: import('../views/RoiView.vue')
+    },
+    {
+      path: '/edge-detection',
+      name: 'edge-detection',
+      component: import('../views/EdgeDetectionView.vue')
+    }
+
     // {
     //   path: '/about',
     //   name: 'about',

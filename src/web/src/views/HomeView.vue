@@ -1,20 +1,20 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-import WelcomeItem from '../components/WelcomeItem.vue'
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main>
-    Click On an Item Below to See OpenCV In Action
-
-      <RouterLink to="/getting-started-with-images">
-        <WelcomeItem>
-
-          Getting Started With Images
-          Learn how to read an image and how to display it in a web.
-        </WelcomeItem>
-      </RouterLink>
-
+  <main class="grid">
+    <div class="mt-6 font-medium text-lg">Click A Link Below To See OpenCV In Action</div>
+    <ul class="list-decimal underline text-blue-800">
+      <li>
+        <RouterLink to="/getting-started-with-images">
+          Getting Started With Images: Learn how to read an image and how to display it in a web.
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/roi"> Region Of Interest(ROI) </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/edge-detection"> Edge Detection </RouterLink>
+      </li>
+    </ul>
   </main>
 </template>
